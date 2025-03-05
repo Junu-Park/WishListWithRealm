@@ -57,7 +57,7 @@ final class WishRepository: WishRepositoryInterface {
                 folder.wishList.append(newWish)
             }
         } catch {
-            print("Wish 생성 실패")
+            print("WishInFolder 생성 실패")
         }
     }
     
