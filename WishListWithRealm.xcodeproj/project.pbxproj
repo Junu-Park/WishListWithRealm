@@ -12,6 +12,7 @@
 		5134A6D72D783A710052B9B9 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5134A6D62D783A710052B9B9 /* SnapKit */; };
 		5134A6DA2D783A950052B9B9 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 5134A6D92D783A950052B9B9 /* RxCocoa */; };
 		5134A6DC2D783A950052B9B9 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5134A6DB2D783A950052B9B9 /* RxSwift */; };
+		5134A7422D7864430052B9B9 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 5134A7412D7864430052B9B9 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		5134A6B42D78380D0052B9B9 /* WishListWithRealm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WishListWithRealm.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5134A7412D7864430052B9B9 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -71,6 +73,7 @@
 		5134A6AB2D78380D0052B9B9 = {
 			isa = PBXGroup;
 			children = (
+				5134A7412D7864430052B9B9 /* .gitignore */,
 				5134A6B62D78380D0052B9B9 /* WishListWithRealm */,
 				5134A6B52D78380D0052B9B9 /* Products */,
 			);
@@ -158,6 +161,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5134A7422D7864430052B9B9 /* .gitignore in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
