@@ -79,7 +79,7 @@ final class FolderViewController: BaseViewController {
             snapshot.appendItems(Array(self.folderRepo.fetchFolder()), toSection: section)
         }
         
-        self.dataSource.apply(snapshot)
+        self.dataSource.applySnapshotUsingReloadData(snapshot)
     }
     
     @objc private func createFolder() {
