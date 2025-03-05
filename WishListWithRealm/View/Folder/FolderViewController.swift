@@ -93,5 +93,6 @@ extension FolderViewController: UICollectionViewDelegate {
         print(indexPath)
         let data = self.folderRepo.fetchFolder()[indexPath.item]
         self.folderRepo.deleteFolder(folder: data)
+        self.updateCollectionView()
     }
 }
