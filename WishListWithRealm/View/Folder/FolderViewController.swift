@@ -29,6 +29,11 @@ final class FolderViewController: BaseViewController {
         self.updateCollectionView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.updateCollectionView()
+    }
+    
     override func configureHierarchy() {
         self.view.addSubview(self.collectionView)
     }
