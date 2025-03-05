@@ -90,9 +90,9 @@ final class FolderViewController: BaseViewController {
 
 extension FolderViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(indexPath)
         let data = self.folderRepo.fetchFolder()[indexPath.item]
-        self.folderRepo.deleteFolder(folder: data)
-        self.updateCollectionView()
+        let vc = WishListViewController()
+        vc.folderID = data.id
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
