@@ -13,6 +13,10 @@ class BaseViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
     }
     
+    deinit {
+        print("deinit: \(Self.self)")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
