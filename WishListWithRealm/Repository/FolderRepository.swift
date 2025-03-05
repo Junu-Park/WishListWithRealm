@@ -10,6 +10,7 @@ import Foundation
 import RealmSwift
 
 protocol FolderRepositoryInterface {
+    func checkLocation() 
     func fetchFolder() -> Results<Folder>
     func createFolder(name: String)
     func deleteFolder(folder: Folder)
@@ -17,6 +18,10 @@ protocol FolderRepositoryInterface {
 
 final class FolderRepository: FolderRepositoryInterface {
     private let realm: Realm = try! Realm()
+    
+    func checkLocation() {
+        print(self.realm.configuration.fileURL ?? "경로 확인 불가")
+    }
     
     func fetchFolder() -> Results<Folder> {
         return self.realm.objects(Folder.self)
