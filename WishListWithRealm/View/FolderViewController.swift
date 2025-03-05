@@ -7,8 +7,10 @@
 
 import UIKit
 
-final class FolderViewController: UIViewController {
-
+final class FolderViewController: BaseViewController {
+    
+    private let collectionView: UICollectionView = UICollectionView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
