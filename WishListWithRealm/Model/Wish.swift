@@ -14,6 +14,8 @@ final class Wish: Object {
     @Persisted var title: String
     @Persisted var content: String
     
+    @Persisted(originProperty: "wishList") var folder: LinkingObjects<Folder>
+    
     convenience init(title: String, content: String) {
         self.init()
         self.title = title

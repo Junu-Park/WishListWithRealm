@@ -16,7 +16,6 @@ final class WishListViewController: BaseViewController {
 
     private let tableView: UITableView = UITableView(frame: .zero, style: .plain)
     
-    private let folderRepo: FolderRepositoryInterface = FolderRepository()
     private let wishRepo: WishRepositoryInterface = WishRepository()
     var folderID: ObjectId!
     private let publishRelay: PublishRelay<List<Wish>> = PublishRelay()
@@ -25,7 +24,7 @@ final class WishListViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.folderRepo.checkLocation()
+        self.wishRepo.checkLocation()
     }
     
     override func configureHierarchy() {
@@ -39,11 +38,12 @@ final class WishListViewController: BaseViewController {
     }
     
     override func configureView() {
-        guard let data = self.folderRepo.fetchFolder().where({ $0.id == self.folderID }).first else {
+        
+        guard let firstWish = self.wishRepo.fetchWishListInFolder(folderID: self.folderID).first, let belongedFolder = firstWish.folder.first else {
             self.navigationItem.title = "데이터 읽어오기 실패"
             return
         }
-        self.navigationItem.title = data.name
+        self.navigationItem.title = belongedFolder.name
         
         let sc = UISearchController()
         sc.hidesNavigationBarDuringPresentation = false
